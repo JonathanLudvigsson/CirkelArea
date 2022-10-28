@@ -12,6 +12,9 @@ namespace CirkelArea
 
             Circle c2 = new Circle(6);
             Console.WriteLine(c2.GetArea());
+
+            Triangle t = new Triangle(5, 8);
+            Console.WriteLine(t.GetArea());
         }
     }
     class Circle
@@ -27,6 +30,22 @@ namespace CirkelArea
         public float GetArea()
         {
             return _radius * _radius * _pi;
+        }
+    }
+    class Triangle
+    {
+        private float _width;
+        private float _height;
+
+        public Triangle(float width, float height)
+        {
+            _width = width;
+            _height = height;
+        }
+
+        public float GetArea()
+        {
+            return _width * _height / 2;
         }
     }
 }
